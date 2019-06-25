@@ -1,0 +1,30 @@
+<div class="container">
+<div ><b>Interpolation</b>:{{stringInterpolation}}</div>
+<div class="evenborder"><b>Event Bnding : </b>
+ <div>First Name : <input type="text" (keyup)="firstname($event)" /></div>
+ <div>Last Name : <input type="text" (keyup)="lastname($event)" /></div><br/>
+ <div><button (click)="fullname()">Show Full Name</button></div><br/>
+ <div *ngIf="display">Display : {{fullnames}}</div>
+</div>
+<div class="evenborder"><b>Property Binding : </b>
+    <div><button (click)="disable()">Disabled</button></div>
+    <div><input type="text" [disabled]="disabled" /></div>
+</div>
+<div class="evenborder"><b>Class Binding : </b>
+    <div><button (click)="show()">Show</button></div>
+    <div><button (click)="hide()">Hide</button></div>
+    <div [ngClass]="showFlag?'show':'hide'">Class Binding Showing!!!!</div>
+</div>
+<div class="evenborder"><b>Style Binding : </b>
+    <div><button (click)="red()">Red Color</button></div>
+    <div [style.color]="colorFlag?'red':'blue'">Class Binding Showing!!!!</div>
+</div>
+<div class="evenborder"><b>Template Reference Variable : </b><br/><br/>
+    <input type="text" #name />
+    <button (click)="textClicked(name)">Text Clicked</button><br/><br/>
+    <div>Template Reference by input:{{templateReference}}</div>
+</div>
+<div class="evenborder"><b>Two Way Binding : </b><br/><br/>
+    <input type="text" [(ngModel)]="userName" /><br/><br/>
+    <div><b>Binding Value</b>: {{userName}}</div>
+</div>

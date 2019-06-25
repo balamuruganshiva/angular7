@@ -1,0 +1,17 @@
+<div class="container">
+    <div><b>Looping</b></div>
+    <div class="evenborder"><b>ngFor : </b>
+        <div><button (click)="getUser()">Get User</button></div>
+        <ul *ngIf="user">
+            <li *ngFor="let user of user">
+                <div><b>Name</b>: {{user.employee_name}}</div>
+                <div><b>Salary</b> : {{user.employee_salary}}</div>
+                <div><b>Age</b> : {{user.employee_age}}</div>
+            </li>
+        </ul>
+    </div>
+    <div class="evenborder"><b>ngIf : </b>
+        <div><button (click)="showText()">Show Text</button></div>
+        <div *ngIf="showFlag">Showing Text !!!!!!!!!!!!!!!</div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="homecontent">
+    <ul *ngIf="employee">
+        <li *ngFor="let user of employee">
+          <div><b>Name</b>: {{user.employee_name}}</div>
+          <div><b>Salary</b> : {{user.employee_salary}}</div>
+          <div><b>Age</b> : {{user.employee_age}}</div>
+          <div><input type="type" (keyup)="getValue($event)"/></div>
+        <div>
+          <button [type]='attr' [disabled]='isDisabled' (click)="funcClick(user)">Disable me</button>
+         
+        </div>
+        </li>
+      </ul>
+</div>

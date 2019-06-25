@@ -1,0 +1,4 @@
+.container{width:95%;border:1px solid #CCC;padding:2% 2%;margin:20px auto;}
+.evenborder{border:2px solid #CCC;padding:20px;overflow:hidden;margin:10px 0;}
+.show{display:block}
+.hide{visibility: hidden;}

@@ -1,0 +1,22 @@
+<div class="homecontent">
+    {{homeContent}}
+    <h1>Users</h1>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p #text>Text Me</p>
+    <p [ngClass]="{show:ShowText,hide:!ShowText}"  >{{ user.first_name }} {{ user.last_name }}</p>
+    <div><button *ngIf="!ShowText" (click)="ShowName()" [style.color]="!ShowText?'green':'red'">Show Text</button>
+    <button *ngIf="ShowText" (click)="HideName()" [style.color]="ShowText?'red':'green'">Hide Text</button>
+  </div>
+    <input type="text" #name />
+    <button (click)="textClicked(name)">Text Clicked</button>
+    <div>Template Reference by tag: {{text.textContent}}</div>
+    <div>Template Reference by input:{{templateReference}}</div>
+    <input [(ngModel)]="userName">
+    <p>Hello {{userName}}!</p>
+  </li>
+</ul>
+
+</div>
