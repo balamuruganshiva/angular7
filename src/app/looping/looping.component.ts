@@ -9,6 +9,7 @@ import {DataService} from './../data.service';
 export class LoopingComponent implements OnInit {
   user:any;
   showFlag:boolean;
+  switchValue:string;
   constructor(private data: DataService) { }
 
   ngOnInit() {
@@ -24,5 +25,8 @@ export class LoopingComponent implements OnInit {
   }
   showText(){
     this.showFlag = true;
+  }
+  showSwitch(value){
+    this.switchValue = value;
   }
 }

@@ -14,4 +14,15 @@
         <div><button (click)="showText()">Show Text</button></div>
         <div *ngIf="showFlag">Showing Text !!!!!!!!!!!!!!!</div>
     </div>
+    <div class="evenborder"><b>ngSwitch : </b>
+        <div><button (click)="showSwitch('green')">Show Green Text</button></div>
+        <div><button (click)="showSwitch('yellow')">Show Yellow Text</button></div>
+        <div><button (click)="showSwitch('red')">Show Red Text</button></div>
+        <div [ngSwitch]="switchValue">
+                <p *ngSwitchCase="'green'" class="green">Showing Green Text !!!!!</p>
+                <p *ngSwitchCase="'yellow'" class="yellow">Showing Yellow Text !!!!!</p>
+                <p *ngSwitchCase="'red'" class="red">Showing Red Text !!!!!</p>
+                <p *ngSwitchDefault>Showing Standard Text !!!!!</p>
+        </div>
+    </div>
 </div>
