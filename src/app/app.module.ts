@@ -16,6 +16,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BindingComponent } from './binding/binding.component';
 import { LoopingComponent } from './looping/looping.component';
+import { SharingComponent } from './sharing/sharing.component';
+import { ChildComponent } from './sharing/child/child.component';
+import { DatashareComponent } from './datashare/datashare.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { LoopingComponent } from './looping/looping.component';
     AboutComponent,
     ContactComponent,
     BindingComponent,
-    LoopingComponent
+    LoopingComponent,
+    SharingComponent,
+    ChildComponent,
+    DatashareComponent
   ],
   imports: [
     BrowserModule,

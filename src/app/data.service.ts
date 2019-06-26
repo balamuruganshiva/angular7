@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-
+   private name:string;
   constructor(private http: HttpClient) { }
 
   getUsers() {
@@ -15,5 +15,11 @@ export class DataService {
   getEmployee() {
     return this.http.get("http://dummy.restapiexample.com/api/v1/employees");
   }
-  
+
+  setValue(name){
+     this.name = name;
+  }
+  getValue(){
+    return this.name;
+  }
 }

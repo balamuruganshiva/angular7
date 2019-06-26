@@ -1,0 +1,20 @@
+<div class="container">
+    <div><b>Looping</b></div>
+    <div class="evenborder"><b>Parent Component : </b>
+      <div><button (click)="parentComponent()">Share Data From Parent To Child</button></div>
+        <div>Message From Child:{{message}}</div>
+    </div>
+    <div class="evenborder"><b>Child Component : </b>
+         <app-child [parentData]="user" (messageEvent)="message=$event" ></app-child>
+    </div>
+    <div class="evenborder"><b>Share Data by viewChild : </b>
+          <button (click)="setRedColor()">Set Red Color</button>
+          <p #redcolor>Text Color red</p>
+    </div>
+    <div class="evenborder"><b>Share Data by service : </b>
+      <button (click)="SetValue()">SetValue</button>
+    </div>
+    <div class="evenborder"><b>Get data from service by sharing:</b>
+      <app-datashare></app-datashare>
+    </div>
+</div>
